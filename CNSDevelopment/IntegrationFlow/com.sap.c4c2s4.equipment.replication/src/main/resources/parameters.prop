@@ -1,0 +1,20 @@
+#Fri Oct 04 07:46:13 UTC 2024
+S4_Private_Key=
+Data\ Store\ Retention\ Threshold=2
+C4C_S_Equipment=/c4c/s4/registeredProductS4ReplicationOut
+Sender_Auth=ESBMessaging.send
+Timeout=60000
+S4_ProxyType=sapcc
+CNS_Credential=QW9_300_ns_staging
+S4_Receiver_Auth=Basic
+Data\ Store\ Expiry\ Period=7
+S4_Timeout=1
+Location_ID=
+S4_Credential=CODINTG
+Equipment_DataStore=Equi-ns-staging-qw9-300
+Prot-Host-Port=http\://qw9.wdf.sap.corp\:8080
+CNS_Authentication=Basic
+Sender_Role=0
+S4_Custom_Query=sap-client\=300
+CNS-Host=ns-staging.cxm-salescloud.com
+Warranty_Type=1

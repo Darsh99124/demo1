@@ -1,0 +1,16 @@
+#Fri Oct 04 07:46:09 UTC 2024
+A=
+Issuer=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=
+Extension\ Implemented=false
+CNS_Credential=QW9_300_ns_staging
+Subject=
+issuer=cn\=issuer
+S4_enableBasicAuthentication_4=true
+UserRole=ESBMessaging.send
+S4_AccountHirearchy_S=/S4/CNS/COD_CUSTHIERMAS
+Invalid\ XML\ Character\ Handling=throwException
+CNS_Authentication=Basic
+CNS-Host=ns-staging.cxm-salescloud.com

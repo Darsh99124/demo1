@@ -1,0 +1,18 @@
+#Fri Oct 04 07:46:09 UTC 2024
+IndustryClassificationSystemCode=0001
+Custom\ Exit=false
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+false=false
+P_DoImplicitAddressMatching=false
+Extension_EndPoint=/S4/CNS/BusinessPartnerSUITEBulkReplicateRequest_Out_Exit
+CNS_Credential=C4C-COMM-USER
+User\ Role=ESBMessaging.send
+issuer=cn\=issuer
+Default\ S4\ ID=false
+Do\ implicit\ Address\ Matching=false
+CNS_Authentication=Basic
+Sender_Address=/S4/CNS/BusinessPartnerSUITEBulkReplicateRequest_Out
+CNS-Host=*.cxm-salescloud.com

@@ -1,0 +1,774 @@
+{
+	"openapi": "3.0.3",
+	"info": {
+		"title": "Employee Inbound Replication",
+		"version": "1.0.0",
+		"description": "This API replicates employees from SAP S/4HANA to SAP Sales and Service Cloud Version 2."
+	},
+	"servers": [
+		{
+			"url": "https://{hostname}",
+			"description": "Example of server url is https://my1234567.crm.cloud.sap",
+			"variables": {
+				"hostname": {
+					"default": ""
+				}
+			}
+		}
+	],
+	"components": {
+		"securitySchemes": {
+			"basicAuthentication": {
+				"type": "http",
+				"scheme": "basic"
+			}
+		},
+		"schemas": {
+			"error": {
+				"type": "object",
+				"properties": {
+					"error": {
+						"type": "object",
+						"properties": {
+							"code": {
+								"type": "string"
+							},
+							"details": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"message": {
+											"type": "string"
+										},
+										"code": {
+											"type": "string"
+										},
+										"target": {
+											"type": "string"
+										}
+									}
+								}
+							},
+							"message": {
+								"type": "string"
+							},
+							"target": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			},
+			"EmployeeInboundReplicationcreaterequest": {
+				"title": "Employee Inbound Replication create request",
+				"type": "object",
+				"properties": {
+					"messageHeader": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "string",
+								"nullable": true,
+								"format": "uuid",
+								"title": "ID"
+							},
+							"senderCommunicationSystemDisplayId": {
+								"type": "string",
+								"nullable": true,
+								"title": "Sender Communication System Display ID"
+							},
+							"receiverCommunicationSystemDisplayId": {
+								"type": "string",
+								"nullable": true,
+								"title": "Receiver Communication System Display ID"
+							},
+							"creationDateTime": {
+								"type": "string",
+								"format": "date-time",
+								"nullable": true
+							}
+						}
+					},
+					"messageRequests": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"messageHeader": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string",
+											"nullable": true,
+											"format": "uuid",
+											"title": "ID"
+										},
+										"messageEntityName": {
+											"type": "string",
+											"nullable": true
+										},
+										"creationDateTime": {
+											"type": "string",
+											"format": "date-time",
+											"nullable": true
+										},
+										"actionCode": {
+											"type": "string",
+											"nullable": true,
+											"enum": [
+												"CREATE",
+												"DELETE",
+												"SAVE",
+												"QUERY"
+											],
+											"title": "Action Code"
+										},
+										"referenceMessageRequestId": {
+											"type": "string",
+											"nullable": true,
+											"title": "Reference Message Request ID"
+										}
+									}
+								},
+								"body": {
+									"type": "object",
+									"properties": {
+										"displayId": {
+											"type": "string",
+											"nullable": true
+										},
+										"receiverDisplayId": {
+											"type": "string",
+											"nullable": true
+										},
+										"employeeType": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"isInternalEmployee": {
+														"type": "boolean",
+														"nullable": true
+													},
+													"validFrom": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"validTo": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													}
+												}
+											}
+										},
+										"status": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"endDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"startDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"employmentStatus": {
+														"type": "string",
+														"nullable": true
+													}
+												}
+											}
+										},
+										"personalInfo": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"endDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"startDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"academicTitle": {
+														"type": "string",
+														"nullable": true
+													},
+													"formOfAddress": {
+														"type": "string",
+														"nullable": true
+													},
+													"gender": {
+														"type": "string",
+														"nullable": true
+													},
+													"dateOfBirth": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"country": {
+														"type": "string",
+														"nullable": true
+													},
+													"maritalStatus": {
+														"type": "string",
+														"nullable": true
+													},
+													"lastName": {
+														"type": "string",
+														"nullable": true
+													},
+													"firstName": {
+														"type": "string",
+														"nullable": true
+													},
+													"middleName": {
+														"type": "string",
+														"nullable": true
+													}
+												}
+											}
+										},
+										"address": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"subtype": {
+														"type": "string",
+														"nullable": true
+													},
+													"endDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"startDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"isWorkplaceAddress": {
+														"type": "boolean",
+														"nullable": true
+													},
+													"houseAndStreet": {
+														"type": "string",
+														"nullable": true
+													},
+													"city": {
+														"type": "string",
+														"nullable": true
+													},
+													"postalCode": {
+														"type": "string",
+														"nullable": true
+													},
+													"country": {
+														"type": "string",
+														"nullable": true
+													},
+													"region": {
+														"type": "string",
+														"nullable": true
+													},
+													"building": {
+														"type": "string",
+														"nullable": true
+													},
+													"floor": {
+														"type": "string",
+														"nullable": true
+													},
+													"telephone": {
+														"type": "string",
+														"nullable": true
+													}
+												}
+											}
+										},
+										"communication": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"subtype": {
+														"type": "string",
+														"nullable": true
+													},
+													"endDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"startDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"email": {
+														"type": "string",
+														"nullable": true
+													}
+												}
+											}
+										},
+										"salesResponsibility": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"endDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"startDate": {
+														"type": "string",
+														"format": "date",
+														"nullable": true
+													},
+													"salesOrganizationDisplayId": {
+														"type": "string",
+														"nullable": true
+													}
+												}
+											}
+										},
+										"extensions": {
+											"type": "object",
+											"properties": {
+												"trial1_lhypd2xh": {
+													"type": "string",
+													"nullable": true,
+													"maxLength": 40,
+													"title": "Trial1"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"extensions": {
+						"type": "object",
+						"properties": {
+							"trial1_lhypd2xh": {
+								"type": "string",
+								"nullable": true,
+								"maxLength": 40,
+								"title": "Trial1"
+							}
+						}
+					}
+				}
+			},
+			"EmployeeInboundReplicationfile": {
+				"title": "Employee Inbound Replication file",
+				"type": "object",
+				"properties": {
+					"value": {
+						"type": "object",
+						"properties": {
+							"messageHeader": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "string",
+										"nullable": true,
+										"format": "uuid",
+										"title": "ID"
+									},
+									"senderCommunicationSystemDisplayId": {
+										"type": "string",
+										"nullable": true,
+										"title": "Sender Communication System Display ID"
+									},
+									"receiverCommunicationSystemDisplayId": {
+										"type": "string",
+										"nullable": true,
+										"title": "Receiver Communication System Display ID"
+									},
+									"creationDateTime": {
+										"type": "string",
+										"format": "date-time",
+										"nullable": true
+									}
+								}
+							},
+							"messageRequests": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"messageHeader": {
+											"type": "object",
+											"properties": {
+												"id": {
+													"type": "string",
+													"nullable": true,
+													"format": "uuid",
+													"title": "ID"
+												},
+												"messageEntityName": {
+													"type": "string",
+													"nullable": true
+												},
+												"creationDateTime": {
+													"type": "string",
+													"format": "date-time",
+													"nullable": true
+												},
+												"actionCode": {
+													"type": "string",
+													"nullable": true,
+													"enum": [
+														"CREATE",
+														"DELETE",
+														"SAVE",
+														"QUERY"
+													],
+													"title": "Action Code"
+												},
+												"referenceMessageRequestId": {
+													"type": "string",
+													"nullable": true,
+													"title": "Reference Message Request ID"
+												}
+											}
+										},
+										"body": {
+											"type": "object",
+											"properties": {
+												"displayId": {
+													"type": "string",
+													"nullable": true
+												},
+												"receiverDisplayId": {
+													"type": "string",
+													"nullable": true
+												},
+												"employeeType": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"isInternalEmployee": {
+																"type": "boolean",
+																"nullable": true
+															},
+															"validFrom": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"validTo": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															}
+														}
+													}
+												},
+												"status": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"endDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"startDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"employmentStatus": {
+																"type": "string",
+																"nullable": true
+															}
+														}
+													}
+												},
+												"personalInfo": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"endDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"startDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"academicTitle": {
+																"type": "string",
+																"nullable": true
+															},
+															"formOfAddress": {
+																"type": "string",
+																"nullable": true
+															},
+															"gender": {
+																"type": "string",
+																"nullable": true
+															},
+															"dateOfBirth": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"country": {
+																"type": "string",
+																"nullable": true
+															},
+															"maritalStatus": {
+																"type": "string",
+																"nullable": true
+															},
+															"lastName": {
+																"type": "string",
+																"nullable": true
+															},
+															"firstName": {
+																"type": "string",
+																"nullable": true
+															},
+															"middleName": {
+																"type": "string",
+																"nullable": true
+															}
+														}
+													}
+												},
+												"address": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"subtype": {
+																"type": "string",
+																"nullable": true
+															},
+															"endDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"startDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"isWorkplaceAddress": {
+																"type": "boolean",
+																"nullable": true
+															},
+															"houseAndStreet": {
+																"type": "string",
+																"nullable": true
+															},
+															"city": {
+																"type": "string",
+																"nullable": true
+															},
+															"postalCode": {
+																"type": "string",
+																"nullable": true
+															},
+															"country": {
+																"type": "string",
+																"nullable": true
+															},
+															"region": {
+																"type": "string",
+																"nullable": true
+															},
+															"building": {
+																"type": "string",
+																"nullable": true
+															},
+															"floor": {
+																"type": "string",
+																"nullable": true
+															},
+															"telephone": {
+																"type": "string",
+																"nullable": true
+															}
+														}
+													}
+												},
+												"communication": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"subtype": {
+																"type": "string",
+																"nullable": true
+															},
+															"endDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"startDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"email": {
+																"type": "string",
+																"nullable": true
+															}
+														}
+													}
+												},
+												"salesResponsibility": {
+													"type": "array",
+													"items": {
+														"type": "object",
+														"properties": {
+															"endDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"startDate": {
+																"type": "string",
+																"format": "date",
+																"nullable": true
+															},
+															"salesOrganizationDisplayId": {
+																"type": "string",
+																"nullable": true
+															}
+														}
+													}
+												},
+												"extensions": {
+													"type": "object",
+													"properties": {
+														"trial1_lhypd2xh": {
+															"type": "string",
+															"nullable": true,
+															"maxLength": 40,
+															"title": "Trial1"
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"extensions": {
+								"type": "object",
+								"properties": {
+									"trial1_lhypd2xh": {
+										"type": "string",
+										"nullable": true,
+										"maxLength": 40,
+										"title": "Trial1"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"security": [
+		{
+			"basicAuthentication": []
+		}
+	],
+	"paths": {
+		"/sap/c4c/api/v1/inbound-data-connector-service/messages/sap.crm.md.integrationmetadataservice.entity.employeeS4ReplicationMessageIn": {
+			"post": {
+				"operationId": "createmd.integrationmetadataservice_employeeS4ReplicationIn",
+				"tags": [
+					"EmployeeS4ReplicationIn"
+				],
+				"summary": "Create data",
+				"parameters": [],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/EmployeeInboundReplicationcreaterequest"
+							}
+						}
+					}
+				},
+				"responses": {
+					"201": {
+						"description": "201 CREATED",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/EmployeeInboundReplicationfile"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "400 BAD_REQUEST",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/error"
+								}
+							}
+						}
+					},
+					"401": {
+						"description": "401 UNAUTHORIZED"
+					},
+					"403": {
+						"description": "403 FORBIDDEN"
+					},
+					"404": {
+						"description": "404 NOT_FOUND"
+					},
+					"500": {
+						"description": "500 INTERNAL_SERVER_ERROR",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/error"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"x-sap-shortText": "Manage entities from Employee Inbound Replication service.",
+	"x-sap-extensible": {
+		"supported": "automatic",
+		"description": "You can create extension fields in the Employee Inbound Replication API by following the steps mentioned in https://help.sap.com/docs/CX_NG_SVC/2c87cece32844c91836e535aef8f9642/d3bdfac0c6b141c0bac27408c3ed159f.html?locale=en-US. The newly created extensions will be available in the API request and response body."
+	}
+}

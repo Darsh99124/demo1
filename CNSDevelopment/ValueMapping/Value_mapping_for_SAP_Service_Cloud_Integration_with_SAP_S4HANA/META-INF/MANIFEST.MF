@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: Value_mapping_for_SAP_Service_Cloud_Integration_wit
+ h_SAP_S4HANA; singleton:=true
+Bundle-ManifestVersion: 2
+Origin-Bundle-SymbolicName: Value_mapping_for_SAP_Service_Cloud_Integrat
+ ion_with_SAP_S4HANA
+Origin-Bundle-Version: 1.0.2
+Import-Package: com.sap.xi.mapping.camel.valmap
+Origin-Bundle-Name: Value Mapping for Master Data Integration with SAP S
+ 4HANA
+Bundle-Name: Value Mapping for Master Data Integration with SAP S4HANA
+Bundle-Version: 1.0.2
+Bundle-Activator: com.sap.xi.mapping.camel.valmap.ValueMappingActivator
+SAP-NodeType: IFLMAP
+Origin-ModifiedDate: 1719502121666
+SAP-BundleType: ValueMapping
+Import-Service: 
+

@@ -1,0 +1,13 @@
+#Fri Oct 04 07:46:13 UTC 2024
+Custom\ Exit=false
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+Extension_EndPoint=/S4/CNS/BusinessPartnerRelationshipSUITEBulkReplicateRequest_Out_Exit
+CNS_Credential=C4C-COMM-USER
+User\ Role=ESBMessaging.send
+issuer=cn\=issuer
+CNS_Authentication=Basic
+Sender_Address=/S4/CNS/BusinessPartnerRelationshipSUITEBulkReplicateRequest_Out
+CNS-Host=*.cxm-salescloud.com

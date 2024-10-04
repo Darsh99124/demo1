@@ -1,0 +1,10 @@
+#Fri Oct 04 07:46:03 UTC 2024
+Timeout=60000
+Sender_Auth=RoleBased
+subject=
+CNS_Authentication=Basic
+CNS_Credential=C4C-COMM-USER
+User\ Role=ESBMessaging.send
+Sender_Address=/S4/CNS/RegionReplication
+CNS-Host=*.cxm-salescloud.com
+issuer=

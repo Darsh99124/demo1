@@ -1,0 +1,6 @@
+#Store metainfo properties
+#Fri Oct 04 07:46:05 UTC 2024
+description=This integration flow replicates Employee from SAP S/4HANA to SAP Sales Cloud and SAP Service Cloud Version 2
+SAP-MarkedSAP2SAP=SAP_TO_SAP_INTEGRATION
+source=SAPS4HANA
+target=SAPSalesCloudandSAPServiceCloudVersion2

@@ -1,0 +1,88 @@
+Manifest-Version: 1.0
+Bundle-SymbolicName: com.sap.c4c2s4.functionallocation.replication
+Bundle-ManifestVersion: 2
+Origin-Bundle-SymbolicName: com.sap.c4c2s4.functionallocation.replicatio
+ n
+SAP-ArtifactTrait: 
+Origin-Bundle-Version: 1.0.1
+Import-Package:  com.sap.esb.webservice.one.way, com.sap.it.rt.adapter.o
+ data.response, com.sap.it.rt.adapter.odata.destination, com.sap.it.rt.a
+ dapter.odata.auth, com.sap.gateway.core.ip.processor.odataprocessors, c
+ om.sap.gateway.core.ip.component.odata, com.sap.it.nm.security, com.sap
+ .it.rt.camel.aggregate.strategies, org.apache.camel.component.xslt, org
+ .mozilla.javascript, org.codehaus.groovy.reflection, org.codehaus.groov
+ y.runtime.callsite, org.codehaus.groovy.runtime.typehandling, org.codeh
+ aus.groovy.runtime, groovy.lang, org.codehaus.groovy.jsr223, com.sap.ga
+ teway.ip.core.customdev.util, com.sap.gateway.ip.core.customdev.logging
+ , com.sap.gateway.ip.core.customdev.processor, org.springframework.tran
+ saction.support, org.springframework.jdbc.datasource, com.sap.it.iflow.
+ saxonee, net.sf.saxon.lib, com.sap.it.api.mapping, com.sap.aii.mapping.
+ value.api, com.sap.aii.mapping.lookup, com.sap.aii.mappingtool.tfapi, c
+ om.sap.aii.mappingtool.tf7.rt, com.sap.aii.mappingtool.tf7, com.sap.aii
+ .mappingtool.tf3.rt, com.sap.aii.mappingtool.tf3, com.sap.aii.mappingto
+ ol.flib7, com.sap.aii.mappingtool.flib3, com.sap.aii.mapping.api, com.s
+ ap.aii.ib.bom.flib.types, com.sap.it.http.cookie.policy, org.apache.cam
+ el.http.common.cookie, com.sap.esb.datastore.wrapper, com.sap.esb.monit
+ oring.cxf.response.log, com.sap.esb.monitoring.cxf.runtime.feature, com
+ .sap.it.op.agent.trace.cxf, com.sap.esb.size.limiter, com.sap.esb.camel
+ .webservice.endpoint.configurer, com.sap.esb.webservice.security.crypto
+ .api, com.sap.esb.webservice.policy.alternative.selector, org.apache.cx
+ f.ws.security.wss4j, org.apache.wss4j.common.crypto, javax.security.aut
+ h.callback, com.sap.it.iflow.model.runtime, com.sap.it.iflow.model, com
+ .sap.sod.utils.idoc.soap.interceptors, com.sap.sod.utils.idoc.soap.proc
+ essors, com.sap.sod.utils.idoc.soap, com.sap.sod.utils.soap.processors,
+  com.sap.sod.utils.soap, com.sap.sod.utils.encoding.processors, com.sap
+ .sod.utils.cxf.interceptors, com.sap.esb.camel.jdbc.inprogress.reposito
+ ry, com.sap.esb.camel.jdbc.idempotency.repository, com.sap.esb.camel.we
+ bservice.cxfbinding, com.sap.esb.camel.mpl.access, com.sap.esb.camel.ei
+ p.splitter, com.sap.esb.camel.xmljson, com.sap.it.op.ed, com.sap.it.op.
+ agent.ed.plugins.camel.api, com.sap.esb.webservice.authorization.suppli
+ er.api, org.apache.cxf.interceptor.security, net.sf.saxon.xpath, net.sf
+ .saxon,com.sap.esb.application.services.cxf.interceptor,com.sap.esb.sec
+ urity,com.sap.it.op.agent.api,com.sap.it.op.agent.collector.camel,com.s
+ ap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,javax.jms,javax.jw
+ s,javax.wsdl,javax.xml.bind.annotation,javax.xml.namespace,javax.xml.ws
+ ,org.apache.camel;version="2.8",org.apache.camel.builder;version="2.8",
+ org.apache.camel.builder.xml;version="2.8",org.apache.camel.component.c
+ xf,org.apache.camel.model;version="2.8",org.apache.camel.processor;vers
+ ion="2.8",org.apache.camel.processor.aggregate;version="2.8",org.apache
+ .camel.spring.spi;version="2.8",org.apache.commons.logging,org.apache.c
+ xf.binding,org.apache.cxf.binding.soap,org.apache.cxf.binding.soap.spri
+ ng,org.apache.cxf.bus,org.apache.cxf.bus.resource,org.apache.cxf.bus.sp
+ ring,org.apache.cxf.buslifecycle,org.apache.cxf.catalog,org.apache.cxf.
+ configuration.jsse;version="2.5",org.apache.cxf.configuration.spring,or
+ g.apache.cxf.endpoint,org.apache.cxf.headers,org.apache.cxf.interceptor
+ ,org.apache.cxf.management.counters;version="2.5",org.apache.cxf.messag
+ e,org.apache.cxf.phase,org.apache.cxf.resource,org.apache.cxf.service.f
+ actory,org.apache.cxf.service.model,org.apache.cxf.transport,org.apache
+ .cxf.transport.common.gzip,org.apache.cxf.transport.http,org.apache.cxf
+ .transport.http.policy,org.apache.cxf.workqueue,org.apache.cxf.ws.rm.pe
+ rsistence,org.apache.cxf.wsdl11,org.osgi.framework;version="1.6.0",org.
+ slf4j;version="1.6",org.springframework.beans.factory.config;version="3
+ .0",com.sap.esb.camel.security.cms,org.apache.camel.spi,com.sap.esb.web
+ service.audit.log,com.sap.esb.camel.endpoint.configurator.api,com.sap.e
+ sb.camel.jdbc.idempotency.reorg,javax.sql,org.apache.camel.processor.id
+ empotent.jdbc,org.osgi.service.blueprint;version="[1.0.0,2.0.0)"
+Require-Capability: sap-HCIOData;resolution:=optional,sap-SOAP;resolutio
+ n:=optional
+Origin-Bundle-Name: Replicate Functional Location to SAP S4HANA
+SAP-RuntimeProfile: iflmap
+WorkspaceProfile: iflmap
+Bundle-Name: Replicate Functional Location to SAP S4HANA
+Bundle-Version: 1.0.1
+Bundle-ClassPath: .,/mapping/S4_C4C_RegisteredProductBulkReplicateReques
+ t_v1.jar,/mapping/C4C_S4_RegisteredProductBulkReplicateRequest_Update.j
+ ar,/mapping/GET_C4C_InvolvedParties_MM.jar,/mapping/C4C_S4_UpdateEquipm
+ ent.jar,/mapping/C4C_S4_RegisteredProductBulkReplicateRequest.jar,/mapp
+ ing/C4C_S4_UpdateEquipmentText.jar
+SAP-NodeType: IFLMAP
+Origin-ModifiedDate: 1726500312550
+SAP-BundleType: IntegrationFlow
+Import-Service:  com.sap.esb.camel.endpoint.configurator.api.EndpointCon
+ figurator;multiple:=false;filter="(endpointType=SFTP)",com.sap.esb.webs
+ ervice.audit.log.AuditLogger,com.sap.esb.security.KeyManagerFactory;mul
+ tiple:=false,com.sap.esb.security.TrustManagerFactory;multiple:=false,j
+ avax.sql.DataSource;multiple:=false;filter="(dataSourceName=default)",o
+ rg.apache.cxf.ws.rm.persistence.RMStore;multiple:=false,com.sap.esb.cam
+ el.security.cms.SignatureSplitter;multiple:=false
+

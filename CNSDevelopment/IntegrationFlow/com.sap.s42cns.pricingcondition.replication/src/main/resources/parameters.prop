@@ -1,0 +1,10 @@
+#Fri Oct 04 07:46:09 UTC 2024
+Proxy_Type=default
+Receiver_Auth=Client Certificate
+Timeout=60000
+Sender_Auth=RoleBased
+User\ Role=ESBMessaging.send
+Sender_Address=/S4/CNS/PricingConditionReplication
+Receiver_Credential_Artifact=
+Receiver_Address=*.cxm-salescloud.com
+Private_Key_Alias=

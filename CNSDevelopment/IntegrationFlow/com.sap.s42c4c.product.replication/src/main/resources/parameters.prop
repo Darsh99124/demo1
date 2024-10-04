@@ -1,0 +1,14 @@
+#Fri Oct 04 07:46:05 UTC 2024
+Custom\ Exit=false
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=ClientCertificate
+subject=cn\=subject
+Extension_EndPoint=/S4/CNS/ProductMDMBulkReplicateRequest_Out_Exit
+CNS_Credential=C4C-COMM-USER
+User\ Role=ESBMessaging.send
+issuer=cn\=issuer
+Default\ S4\ ID=true
+CNS_Authentication=Basic
+Sender_Address=/S4/CNS/ProductMDMBulkReplicateRequest_Out
+CNS-Host=*.cxm-salescloud.com

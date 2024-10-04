@@ -1,0 +1,12 @@
+#Fri Oct 04 07:46:05 UTC 2024
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+Invalid\ XML\ Character\ Handling=throwException
+CNS_Authentication=Basic
+CNS_Credential=QW9_300_ns_staging
+User\ Role=ESBMessaging.send
+Sender_Address=/S4/CNS/HRMD_A_CFS_HRMD_A09
+CNS-Host=ns-staging.cxm-salescloud.com
+issuer=cn\=issuer

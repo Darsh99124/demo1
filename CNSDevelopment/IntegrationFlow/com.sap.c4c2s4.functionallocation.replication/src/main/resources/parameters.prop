@@ -1,0 +1,22 @@
+#Fri Oct 04 07:46:07 UTC 2024
+S4_Private_Key_Alias=
+Sender_Auth=RoleBased
+Timeout=60000
+FuncLoc\ Structure\ Indicator=A
+Notes\ Type\ Code=0001
+S4_ProxyType=sapcc
+CNS_Credential=c4c-ng-staging
+S4_Receiver_Auth=Basic
+S4_Timeout=1
+Location_ID=
+S4_Credential=CODINTG
+Language=EN
+User_Role=ESBMessaging.send
+FunctionalLocation_DataStore=SAP_Functional_Loc_Data_Store
+FuncLoc\ Category=S
+Prot-Host-Port=http\://qw9.wdf.sap.corp\:8080
+CNS_Authentication=Basic
+CSRF=0
+Sender_Address=/c4c/s4/functionalLocationS4ReplicationOut
+S4_Custom_Query=sap-client\=300
+CNS-Host=ns-staging.cxm-salescloud.com
