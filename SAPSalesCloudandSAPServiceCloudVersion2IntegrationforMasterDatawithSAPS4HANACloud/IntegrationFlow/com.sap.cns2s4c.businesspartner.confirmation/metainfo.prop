@@ -1,0 +1,6 @@
+#Store metainfo properties
+#Fri Oct 04 06:50:51 UTC 2024
+description=This integration flow confirms Business Partner Replication from SAP Sales Cloud and SAP Service Cloud Version 2 to SAP S/4HANA Public Cloud
+SAP-MarkedSAP2SAP=SAP_TO_SAP_INTEGRATION
+source=SAPSalesCloudandSAPServiceCloudVersion2
+target=SAPS4HANACloud

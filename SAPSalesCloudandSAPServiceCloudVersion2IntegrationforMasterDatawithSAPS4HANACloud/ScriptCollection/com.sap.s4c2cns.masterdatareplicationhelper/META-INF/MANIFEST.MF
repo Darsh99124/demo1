@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Provide-Capability: scriptcollection.com.sap.s4c2cns.masterdatareplicati
+ onhelper;version:Version="1.0.0"
+Bundle-SymbolicName: com.sap.s4c2cns.masterdatareplicationhelper
+Bundle-Name: Master Data Replication Script Collection
+Bundle-Version: 1.0.0
+Bundle-ManifestVersion: 2
+Origin-Bundle-SymbolicName: com.sap.s4c2cns.masterdatareplicationhelper
+SAP-NodeType: IFLMAP
+Import-Package: org.osgi.framework
+Origin-Bundle-Name: Master Data Replication Script Collection
+SAP-BundleType: ScriptCollection
+Import-Service: 
+Origin-Bundle-Version: 1.0.0
+Origin-ModifiedDate: 1726071440660
+

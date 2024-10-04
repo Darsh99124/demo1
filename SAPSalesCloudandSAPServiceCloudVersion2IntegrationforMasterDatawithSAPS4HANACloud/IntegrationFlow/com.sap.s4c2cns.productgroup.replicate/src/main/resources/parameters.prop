@@ -1,0 +1,12 @@
+#Fri Oct 04 06:50:50 UTC 2024
+Material\ Group\ Pattern=xxx-xxx-xxx
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+CNS_Authentication=Client Certificate
+CNS_Credential=
+User\ Role=ESBMessaging.send
+Sender_Address=/S4/CNS/MaterialGroupMasterDataReplicationBundleRequest_Out
+CNS-Host=*.cxm-salescloud.com
+issuer=cn\=issuer

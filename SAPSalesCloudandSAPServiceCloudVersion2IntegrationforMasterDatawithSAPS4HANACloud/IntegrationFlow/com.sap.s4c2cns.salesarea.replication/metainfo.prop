@@ -1,0 +1,6 @@
+#Store metainfo properties
+#Fri Oct 04 06:50:52 UTC 2024
+description=This integration flow replicates Sales Area from SAP S/4HANA Public Cloud to SAP Sales Cloud and SAP Service Cloud Version 2
+SAP-MarkedSAP2SAP=SAP_TO_SAP_INTEGRATION
+source=SAPS4HANACloud
+target=SAPSalesCloudandSAPServiceCloudVersion2

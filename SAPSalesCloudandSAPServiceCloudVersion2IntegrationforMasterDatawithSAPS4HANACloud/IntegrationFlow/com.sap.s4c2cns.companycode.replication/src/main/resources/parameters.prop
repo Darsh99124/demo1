@@ -1,0 +1,13 @@
+#Fri Oct 04 06:50:46 UTC 2024
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+CNS_Credential=
+Language\ Code=EN
+issuer=cn\=issuer
+UserRole=ESBMessaging.send
+CNS_Authentication=Client Certificate
+Display\ Id\ Prefix=CO_
+Sender_Address=/S4/CNS/BNSCompanyCodeMasterDataReplicationBundleRequest_Out
+CNS-Host=*.cxm-salescloud.com

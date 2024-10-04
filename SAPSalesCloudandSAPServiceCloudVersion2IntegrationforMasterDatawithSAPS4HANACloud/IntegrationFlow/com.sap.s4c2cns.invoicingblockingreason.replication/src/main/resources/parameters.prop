@@ -1,0 +1,24 @@
+#Fri Oct 04 06:50:52 UTC 2024
+PROT-HOST-PORT=https\://*.s4hana.ondemand.com\:443
+CNS_Business_User=CRED ALIAS NAME
+Throw\ Exception\ On\ Failure=true
+S4_Private_Key_Alias=
+Scheduler=<row><cell>dateType</cell><cell></cell></row><row><cell>timeType</cell><cell></cell></row><row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>onWeekly</cell><cell></cell></row><row><cell>onMonthly</cell><cell></cell></row><row><cell>OnEveryMinute</cell><cell></cell></row><row><cell>fromInterval</cell><cell></cell></row><row><cell>toInterval</cell><cell></cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>triggerType</cell><cell>simple</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>fireNow\=true</cell></row>
+Timeout=60000
+CNS_Business_User_Auth=Basic
+CNS_Private_Key_Alias=
+CNS_Credential=
+Sender\ Business\ System=Sender Business System Name
+Proxy\ Type=default
+S4_Timeout=60000
+S4_Credential=
+Location\ ID=
+Attach\ Error\ Details\ on\ Failure=true
+Receiver\ Business\ System=sap_cloud_crm_&lt;tenant&gt;
+Language=DE,EN,FR,JA,ES
+Private\ Key\ Alias=
+CNS_Authentication=Client Certificate
+Initial\ Load=true
+Client=001
+S4_Auth=Client Certificate
+CNS-Host=*.cxm-salescloud.com

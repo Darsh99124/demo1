@@ -1,0 +1,6 @@
+#Store metainfo properties
+#Fri Oct 04 06:50:49 UTC 2024
+description=This integration flow replicates Industrial Sector from SAP S/4HANA Public Cloud to SAP Sales Cloud and SAP Service Cloud Version 2. It is a prerequisite for the replication of Business Partners.
+SAP-MarkedSAP2SAP=SAP_TO_SAP_INTEGRATION
+source=SAPS4HANACloud
+target=SAPSalesCloudandSAPServiceCloudVersion2

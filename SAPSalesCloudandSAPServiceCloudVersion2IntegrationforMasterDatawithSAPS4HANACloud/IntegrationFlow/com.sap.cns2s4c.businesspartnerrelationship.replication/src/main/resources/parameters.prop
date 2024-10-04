@@ -1,0 +1,17 @@
+#Fri Oct 04 06:50:51 UTC 2024
+Custom\ Exit=false
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+Extension_EndPoint=/c4c/s4/businessPartnerRelationShipS4ReplicationOut_Exit
+issuer=cn\=issuer
+Location_ID=
+S4_Credential=
+S4_BusinessPartnerRelationshipSUITEBulkReplicateRequest_Address=https\://*.s4hana.ondemand.com/sap/bc/srt/scs_ext/sap/businesspartnerrelationshipsui
+Proxy_Type=default
+User_Role=ESBMessaging.send
+S4_Authentication=Client Certificate
+CSRF=0
+Compress_Message=1
+Sender_Address=/c4c/s4/businessPartnerRelationShipS4ReplicationOut

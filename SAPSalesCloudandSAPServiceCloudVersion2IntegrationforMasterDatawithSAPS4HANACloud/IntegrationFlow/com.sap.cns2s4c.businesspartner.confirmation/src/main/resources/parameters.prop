@@ -1,0 +1,14 @@
+#Fri Oct 04 06:50:51 UTC 2024
+PrivateKeyAlias=
+TimeOut=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+S4_LocationID=
+S4_ProxyType=default
+User\ Role=ESBMessaging.send
+issuer=cn\=issuer
+S4_Credential=
+S4_Authentication=Client Certificate
+CSRF=0
+S4_BusinessPartnerSUITEBulkReplicateConfirmation_Address=https\://*.s4hana.ondemand.com/sap/bc/srt/scs_ext/sap/businesspartnersuitebulkrepli1
+Sender_Address=/c4c/s4/businessPartnerS4ConfirmationOut

@@ -1,0 +1,18 @@
+#Fri Oct 04 06:50:46 UTC 2024
+IndustryClassificationSystemCode=0001
+Custom\ Exit=false
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+Extension_EndPoint=/c4c/s4/businessPartnerS4ReplicationOut_Exit
+S4_BusinessPartnerSUITEBulkReplicateRequest_Address=https\://*.s4hana.ondemand.com/sap/bc/srt/scs_ext/sap/businesspartnersuitebulkreplic
+issuer=cn\=issuer
+Location_ID=
+S4_Credential=
+Proxy_Type=default
+User_Role=ESBMessaging.send
+S4_Authentication=Client Certificate
+CSRF=0
+Compress_Message=1
+Sender_Address=/c4c/s4/businessPartnerS4ReplicationOut

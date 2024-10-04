@@ -1,0 +1,11 @@
+#Fri Oct 04 06:50:51 UTC 2024
+PrivateKeyAlias=
+Timeout=60000
+Sender_Auth=RoleBased
+subject=cn\=subject
+CNS_Authentication=Client Certificate
+CNS_Credential=
+Sender_Role=ESBMessaging.send
+Sender_Address=/S4/CNS/BusinessPartnerSUITEBulkConfirmation_Out
+CNS-Host=*.cxm-salescloud.com
+issuer=cn\=issuer
